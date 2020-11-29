@@ -1,0 +1,13 @@
+[{
+    "id": 1,
+    "name": "Bensound Summer",
+    "author": "Bensound",
+    "img": "https://www.bensound.com/bensound-img/summer.jpg",
+    "music": "/src/assets/music/bensound-summer.mp3"
+},{
+    "id": 2,
+    "name": "Bensound Happyrock",
+    "author": "Bensound",
+    "img": "https://www.bensound.com/bensound-img/happyrock.jpg",
+    "music": "/src/assets/music/bensound-happyrock.mp3"
+}]

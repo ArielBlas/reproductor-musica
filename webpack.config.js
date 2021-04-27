@@ -1,9 +1,10 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const {InjectManifest} = require('workbox-webpack-plugin');
 
 module.exports = {   
     mode: 'development', 
-    entry: './src/index.js',
+    entry: ['@babel/polyfill', './src/index.js'],
     output: {
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
@@ -22,7 +23,8 @@ module.exports = {
                     options:{
                         presets: [
                             "@babel/preset-react",
-                            "@babel/env"]
+                            "@babel/env", 
+                        ]
                     }  
                 }
             },
@@ -66,7 +68,10 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html'
-        })
+        }),
+        // new InjectManifest({
+        //     swSrc: './src/sw.js'
+        // })
     ],
     devtool: 'source-map'
 }
